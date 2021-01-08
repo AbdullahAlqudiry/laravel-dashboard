@@ -7,7 +7,9 @@ Dashboard package create your dashboard with users, roles and settings with only
 composer require alqudiry/dashboard
 ```
 
-### Remove Files
+
+#### Publish 
+Before publish the dashboard, please remove these files first:
 ```bash
 app/Models/User.php
 database/factories/UserFactory.php
@@ -15,9 +17,11 @@ database/migrations/2014_10_12_000000_create_users_table.php
 database/migrations/2014_10_12_100000_create_password_resets_table.php
 resources/lang/ar
 resources/views
+package.json
+webpack.mix.js
 ```
 
-#### Publish 
+publish package
 ```bash
 php artisan vendor:publish --provider="Alqudiry\Dashboard\DashboardServiceProvider"
 ```
