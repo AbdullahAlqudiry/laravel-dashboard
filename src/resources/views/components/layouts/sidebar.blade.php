@@ -14,6 +14,14 @@
             </ul>
 
             @if(auth()->user())
+
+                @if(auth()->user()->hasAnyPermission([
+                    'dashboard.system.statistics.show',
+                    'dashboard.system.users.show',
+                    'dashboard.system.roles.show',
+                    'dashboard.system.web-services.show',
+                    'dashboard.system.settings.show'
+                ]))
                 <ul class="metismenu list-unstyled" id="side-menu">
                     <li class="menu-title" key="t-menu">{{ __('trans.Side Bar.Manage System') }}</li>
 
@@ -63,6 +71,9 @@
                     @endcan
 
                 </ul>
+                
+                @endif
+
             @endif
 
         </div>
