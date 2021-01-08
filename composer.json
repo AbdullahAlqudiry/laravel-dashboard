@@ -1,0 +1,35 @@
+{
+    "name": "alqudiry/dashboard",
+    "description": "Create powerful dashboard",
+    "authors": [
+        {
+            "name": "Abdullah Alqudiry",
+            "email": "abdullah.alqduiry@gmail.com"
+        }
+    ],
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "akaunting/setting": "^1.2",
+        "glhd/aire": "^2.3",
+        "laravel/fortify": "^1.7",
+        "livewire/livewire": "^2.3",
+        "spatie/crypto": "^2.0",
+        "spatie/laravel-permission": "^3.18"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Alqudiry\\Dashboard\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alqudiry\\Dashboard\\DashboardServiceProvider"
+            ]
+        }
+    }
+}
